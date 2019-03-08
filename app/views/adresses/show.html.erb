@@ -17,8 +17,8 @@
 
 <p>
   <strong>Contact:</strong>
-  <%= @adress.contact %>
+  <%= @adress.contact.name %>
 </p>
 
-<%= link_to 'Edit', edit_adress_path(@adress) %> |
-<%= link_to 'Back', adresses_path %>
+<%= link_to 'Editar', edit_adress_path(@adress) %> |
+<%= link_to 'Voltar', adresses_path %>

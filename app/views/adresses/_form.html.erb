@@ -1,4 +1,4 @@
-<%= form_with(model: adress, local: true) do |form| %>
+<%= form_with(model: adress, local: true, class: "smart-green") do |form| %>
   <% if adress.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(adress.errors.count, "error") %> prohibited this adress from being saved:</h2>
@@ -10,6 +10,10 @@
       </ul>
     </div>
   <% end %>
+
+  <h1>
+    Endereços
+  </h1>
 
   <div class="field">
     <%= form.label :street %>
@@ -32,6 +36,7 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Enviar", class: "button"%>
+    <%= link_to 'Voltar', adresses_path, class: "button" %>
   </div>
 <% end %>
